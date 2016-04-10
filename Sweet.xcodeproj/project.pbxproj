@@ -11,6 +11,7 @@
 		0ACDA6421CB53C66009828AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA6411CB53C66009828AA /* Assets.xcassets */; };
 		0ACDA6451CB53C67009828AA /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ACDA6431CB53C67009828AA /* MainMenu.xib */; };
 		0ACDA64D1CB540D4009828AA /* SweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACDA64C1CB540D4009828AA /* SweetViewController.swift */; };
+		708F9AB01CB7B27100D09CB4 /* SweetTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708F9AAF1CB7B27100D09CB4 /* SweetTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		0ACDA6441CB53C67009828AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0ACDA6461CB53C67009828AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ACDA64C1CB540D4009828AA /* SweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetViewController.swift; sourceTree = "<group>"; };
+		708F9AAF1CB7B27100D09CB4 /* SweetTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				0ACDA63F1CB53C66009828AA /* AppDelegate.swift */,
 				0ACDA64C1CB540D4009828AA /* SweetViewController.swift */,
+				708F9AAF1CB7B27100D09CB4 /* SweetTextView.swift */,
 				0ACDA6411CB53C66009828AA /* Assets.xcassets */,
 				0ACDA6431CB53C67009828AA /* MainMenu.xib */,
 				0ACDA6461CB53C67009828AA /* Info.plist */,
@@ -132,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ACDA6401CB53C66009828AA /* AppDelegate.swift in Sources */,
+				708F9AB01CB7B27100D09CB4 /* SweetTextView.swift in Sources */,
 				0ACDA64D1CB540D4009828AA /* SweetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,7 @@
 				0ACDA64B1CB53C67009828AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
