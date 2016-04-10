@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, SweetTextDelegate {
     @IBOutlet weak var image: NSImageView!
     
     let label = NSTextField(frame: NSMakeRect(16, 0, 30, 30))
+    var SEView: SweetEffectView!
     
     let d: CGFloat = 63.0
     let minHeight: CGFloat = 63.0
@@ -30,9 +31,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, SweetTextDelegate {
         self.window.titlebarAppearsTransparent = true
         self.window.backgroundColor = NSColor.clearColor()
         self.window.opaque = false
+        self.window.hasShadow = true
+        self.window.styleMask = NSBorderlessWindowMask | NSFullSizeContentViewWindowMask
+
         
         self.window.movableByWindowBackground = true
-        self.window.contentView = self.view
+        //self.window.contentView = self.view
         self.textview.stdelegate = self
         
         
@@ -42,8 +46,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, SweetTextDelegate {
         self.label.backgroundColor = NSColor.clearColor()
         self.label.bordered = false
         self.label.editable = false
-        self.view.addSubview(self.label)
         
+        SEView = SweetEffectView(frame: NSMakeRect(0, 0, 678, 55))
+        SEView.addSubview(self.label)
+        self.view.addSubview(SEView)
+        
+        self.window.invalidateShadow()
+
         //self.window.collectionBehavior = .CanJoinAllSpaces
         //self.window.level = Int(CGWindowLevelForKey(.MaximumWindowLevelKey))
 

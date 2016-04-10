@@ -15,6 +15,8 @@ protocol SweetTextDelegate {
 
 class SweetScrollView: NSScrollView {
     override func awakeFromNib() {
+        self.backgroundColor = NSColor.clearColor()
+        self.contentView.backgroundColor = NSColor.clearColor()
         //self.hasVerticalScroller = true
     }
 
@@ -28,7 +30,7 @@ class SweetTextView: NSTextView {
     override var textContainerOrigin: NSPoint {
         let o = super.textContainerOrigin
         //NSLog("%f",o.y + 10)
-        return NSMakePoint(o.x, o.y + 14)
+        return NSMakePoint(o.x, o.y)
     }
     
     override func awakeFromNib() {
@@ -40,7 +42,6 @@ class SweetTextView: NSTextView {
         self.backgroundColor = NSColor.clearColor()
         self.font = NSFont.systemFontOfSize(size)
         self.richText = false
-        self.window!.firstResponder
     }
     
     override func didChangeText() {
@@ -61,7 +62,7 @@ class SweetTextView: NSTextView {
         if self.string!.isEmpty && self.window!.firstResponder.acceptsFirstResponder {
             let color = NSColor.grayColor()
             let placeholder = NSAttributedString(string: "What's happening?", attributes: [NSForegroundColorAttributeName : color, NSFontAttributeName : NSFont.systemFontOfSize(size)])
-            placeholder.drawAtPoint(NSMakePoint(6, 14))
+            placeholder.drawAtPoint(NSMakePoint(6, 0))
         }
     }
     
